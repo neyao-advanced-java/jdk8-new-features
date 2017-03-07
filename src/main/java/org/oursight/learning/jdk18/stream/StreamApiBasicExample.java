@@ -14,10 +14,10 @@ public class StreamApiBasicExample {
 
         Stream<Integer> stream = numbers.stream();
         stream.filter(
-                (x -> {
-                    return x % 2 == 0;
-                })
-        ).forEach(System.out::println);
+                (x -> x % 2 == 0)
+        )
+                .map(x -> x * x)
+                .forEach(System.out::println);
     }
 
 
